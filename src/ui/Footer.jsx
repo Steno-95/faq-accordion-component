@@ -1,6 +1,6 @@
 function Footer() {
   return (
-    <footer className="text-center text-[.7rem] text-gray-400 mt-10 min-w-fit">
+    <footer className="text-center text-[.9rem] text-gray-600 mt-10 min-w-fit">
       Challenge by{" "}
       <a
         className="text-(--purple-dark) hover:text-(--purple) focus:text-(--purple) hover:font-semibold"
