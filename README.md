@@ -37,7 +37,7 @@ Mobile
 ### Links
 
 - Solution URL: [Github](https://github.com/Steno-95/faq-accordion-component)
-- Live Site URL: [Netlify](https://your-live-site-url.com)
+- Live Site URL: [Netlify](https://faq-accordion-component-f-m.netlify.app/)
 
 ## My process
 
