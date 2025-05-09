@@ -14,7 +14,7 @@
 
 @layer base {
   html {
-    font-size: clamp(0.8em, 0.4em + 2vw, 2em);
+    font-size: clamp(0.8em, 0.4em + 1.5vw, 2em);
   }
 
   body {
@@ -23,20 +23,46 @@
     font-weight: 400;
   }
   p {
-    font-size: 1rem;
+    font-size: 0.9rem;
+    color: var(--purple);
   }
 
   main {
-    @apply min-h-screen;
+    @apply min-h-screen bg-(--purple-light);
   }
 }
 
 @layer components {
   .header {
-    @apply min-w-fit h-fit;
+    @apply min-w-fit h-fit z-1 relative;
   }
 
   .faq-container {
-    @apply bg-(--white) rounded-lg shadow-lg p-5;
+    @apply bg-(--white) rounded-lg shadow-lg p-5 max-w-[20rem] mx-auto -mt-15 z-2 relative;
+  }
+
+  .button-accordion {
+    @apply relative size-8 rounded-full bg-[url(/images/icon-plus.svg)] bg-no-repeat bg-center has-checked:bg-[url(/images/icon-minus.svg)] focus-within:outline-2;
+  }
+  .content-accordion {
+    height: 0;
+    overflow-y: hidden;
+    transition: all 3s 1s;
+  }
+  .open-acc {
+    height: 100;
+  }
+}
+
+@theme {
+  --animate-open: open 5s ease-in;
+
+  @keyframes open {
+    0% {
+      height: 0%;
+    }
+    100% {
+      height: 100%;
+    }
   }
 }
