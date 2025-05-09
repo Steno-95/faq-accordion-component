@@ -2,6 +2,7 @@ import AccordionBlock from "./components/AccordionBlock";
 import { faq } from "../data/data.json";
 import Header from "./ui/Header";
 import HeaderFAQ from "./components/HeaderFAQ";
+import Footer from "./ui/Footer";
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
       <Header />
       <section className="faq-container">
         <HeaderFAQ />
-        <article className="flex flex-col pb-1 last:border-b-(--purple-light) :">
+        <article className="flex flex-col pb-2 last:border-b-(--purple-light)">
           {faq.map((item, i) => (
             <AccordionBlock
               title={item.title}
@@ -20,6 +21,7 @@ function App() {
           ))}
         </article>
       </section>
+      <Footer />
     </main>
   );
 }

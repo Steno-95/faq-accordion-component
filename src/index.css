@@ -14,7 +14,7 @@
 
 @layer base {
   html {
-    font-size: clamp(0.8em, 0.4em + 1.5vw, 2em);
+    font-size: clamp(0.8em, 0.2em + 1.8vw, 1.5em);
   }
 
   body {
@@ -34,20 +34,19 @@
 
 @layer components {
   .header {
-    @apply min-w-fit h-fit z-1 relative;
+    @apply min-w-full z-1 relative md:bg-[url(/images/background-pattern-desktop.svg)] bg-[url(/images/background-pattern-mobile.svg)] md:h-[40vh] h-[30vh] bg-no-repeat bg-cover;
   }
 
   .faq-container {
-    @apply bg-(--white) rounded-lg shadow-lg p-5 max-w-[20rem] mx-auto -mt-15 z-2 relative;
+    @apply bg-(--white) rounded-lg shadow-lg p-5 max-w-[20rem] mx-auto -mt-[6rem] lg:-mt-[6rem] z-2 relative md:max-w-[30rem];
   }
 
   .button-accordion {
-    @apply relative size-8 rounded-full bg-[url(/images/icon-plus.svg)] bg-no-repeat bg-center has-checked:bg-[url(/images/icon-minus.svg)] focus-within:outline-2;
+    @apply relative size-8 rounded-full bg-[url(/images/icon-plus.svg)] bg-no-repeat bg-center has-checked:bg-[url(/images/icon-minus.svg)] bg-cover;
   }
   .content-accordion {
     height: 0;
     overflow-y: hidden;
-    transition: all 3s 1s;
   }
   .open-acc {
     height: 100;
