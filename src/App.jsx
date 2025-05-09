@@ -6,7 +6,7 @@ import Footer from "./ui/Footer";
 
 function App() {
   return (
-    <main className="relative">
+    <main>
       <Header />
       <section className="faq-container">
         <HeaderFAQ />
