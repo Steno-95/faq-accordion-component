@@ -2,7 +2,7 @@ function AccordionBlock({ title, content, index }) {
   return (
     <div className="group not-last:border-b-2 not-last:border-b-(--purple-light) h-fit not-last:pb-2">
       <label
-        className="flex text-[1rem] tracking-tight pt-4  justify-between items-center hover:text-purple-400 focus-within:text-purple-700 "
+        className="flex text-[1rem] tracking-tight pt-4  justify-between items-center hover:text-purple-400 focus-within:text-purple-700 hover:cursor-pointer "
         htmlFor={`check-${index}`}
       >
         <h2 className="font-semibold max-w-[15rem] md:max-w-fit ">{title}</h2>
